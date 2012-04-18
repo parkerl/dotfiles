@@ -1,5 +1,5 @@
-PROMPT='%{$fg[magenta]%}LOCAL%{$reset_color%} at %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} $(git_cwd_info.rb)
-$(prompt_char) '
+PROMPT='%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} $(git_cwd_info)
+$(prompt_char) > '
 
 RPROMPT=''
 
