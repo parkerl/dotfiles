@@ -1,7 +1,7 @@
 #Don't put comments below this line or they will get moved by the 'aa' function which sorts this file.
 alias b='bundle'
 alias bcm='./build_clinic_manager_engine_acceptance.sh && ./build_clinic_manager_engine_non_acceptance.sh'
-alias blg='bundle list | grep'
+alias blg='bundle list | grep $1'
 alias c='rails console --irb=pry'
 alias cm='cd engines/clinic_manager'
 alias crd='cap review deploy'
