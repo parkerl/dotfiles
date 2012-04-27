@@ -4,3 +4,7 @@ export CDPATH=$CDPATH:~/code
 setopt extendedglob
 export COMMAND_MODE=unix2003
 unalias ps
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins '^O' copy-prev-shell-word
+bindkey -M viins '^L' push-line
+bindkey -M viins '^T' transpose-words

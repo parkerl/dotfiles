@@ -1,5 +1,5 @@
-#Don't put comments below this line or they will get moved by the 'aa' function which sorts this file.
 #Comment can be added inline after the alias definition.
+#Don't put comments below this line or they will get moved by the 'aa' function which sorts this file.
 alias -0='cd -0' #aliases that make the expansion of '-' work
 alias -10='cd -10'
 alias -1='cd -1'
@@ -16,6 +16,7 @@ alias bcm='./build_clinic_manager_engine_acceptance.sh && ./build_clinic_manager
 alias blg='bundle list | grep $1'
 alias c='rails console --irb=pry'
 alias cm='cd engines/clinic_manager'
+alias cpd='pwd | pbcopy'
 alias crd='cap review deploy'
 alias crdm='cap review deploy:migrations'
 alias gauth='git commit --amend --reset-author'

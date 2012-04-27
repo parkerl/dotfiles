@@ -1,4 +1,4 @@
-#compdef rake
+compdef rake
 if [[ -f Rakefile ]]; then
   local recent=$(ls -t .rake_tasks~ Rakefile **/*.rake 2>/dev/zero | head -n 1)
   if [[ $recent != .rake_tasks~ ]]; then
