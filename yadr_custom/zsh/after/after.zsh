@@ -8,3 +8,8 @@ bindkey -M viins 'jk' vi-cmd-mode
 bindkey -M viins '^O' copy-prev-shell-word
 bindkey -M viins '^L' push-line
 bindkey -M viins '^T' transpose-words
+export DYLD_LIBRARY_PATH="/Users/parker/bin/instantclient_10_2"
+export SQLPATH="/Users/parker/bin/instantclient_10_2"
+export NLS_LANG="AMERICAN_AMERICA.UTF8"
+export PATH=$PATH:$DYLD_LIBRARY_PATH
+export ORACLE_HOME="/Users/parker/bin/instantclient_10_2"
