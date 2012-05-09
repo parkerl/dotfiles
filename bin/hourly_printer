@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+lines = ARGF.readlines
+per_5_minutes = lines.count / 12
+
+interval = Time.now.min / 5
+
+interval = interval.to_i
+start = interval * per_5_minutes
+stop = start + per_5_minutes
+puts "\n"
+lines[start..stop].each do |line|
+  puts line
+end

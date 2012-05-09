@@ -1,3 +1,4 @@
 #!/bin/zsh -i
 
-alias
+alias | hourly_printer
+zr

@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+dirs = []
+ARGF.each { |line| dirs.push(line) }
+
+list = dirs.uniq.reverse.map do |line|
+  " #{line.chop}"
+end
+
+puts "dirs #{list.join}"
