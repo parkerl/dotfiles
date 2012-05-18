@@ -1,11 +1,11 @@
 function aa {
-  echo "alias $1='$2'" >> ~/code/personal_settings/yadr_custom/zsh/after/alias.zsh 
+  echo "alias $1='$2' #$3" >> ~/code/personal_settings/yadr_custom/zsh/after/alias.zsh 
   sort -o ~/code/personal_settings/yadr_custom/zsh/after/alias.zsh ~/code/personal_settings/yadr_custom/zsh/after/alias.zsh 
 }
 
 function ah {
   cmnd=$( history | tail -1 | cut -c 8-1000 )
-  echo "alias $1='$cmnd'" >> ~/code/personal_settings/yadr_custom/zsh/after/alias.zsh 
+  echo "alias $1='$cmnd' # $2" >> ~/code/personal_settings/yadr_custom/zsh/after/alias.zsh 
   sort -o ~/code/personal_settings/yadr_custom/zsh/after/alias.zsh ~/code/personal_settings/yadr_custom/zsh/after/alias.zsh 
 }
 function ff { open -a /Applications/Firefox.app http://$1; }
@@ -16,3 +16,4 @@ function wtf {echo 'ALIAS:'; alias | grep $1; echo 'WHICH: '; which $1; echo 'FU
 function zzap { zmv "*$1*" ** }
 function zsub { zmv "*$1*" "*$2*" }
 function zflip { 'zmv' "(*)($1)(*)($2)(*)" '$1$4$3$2$5' }
+function vi-kill-line-and-insert { zle .kill-whole-line;  zle .vi-insert}

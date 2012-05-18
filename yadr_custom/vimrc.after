@@ -1,4 +1,4 @@
-:imap jk <Esc>
+:imap jj <Esc>
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
