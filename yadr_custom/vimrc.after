@@ -1,4 +1,6 @@
 :imap jj <Esc>
+vmap <SPACE><SPACE> <ESC>
+
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
@@ -7,3 +9,30 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
+vmap y ygv<ESC>
+
+let g:ruby_conque_rspec_runner='bundle exec rspec'
+
+nmap <silent> <C-x> mzggVG!xmpfilter -a<cr>'z
+imap <silent> xx <ESC><C-x>'
+vmap <silent> <C-i> !xmpfilter -m<cr>
+nmap <silent> <C-i> V<C-i>
+imap <silent> <C-i> <ESC><C-i>a
+
+set pastetoggle=<leader>p
+
+map <leader>rs :RunRspecCurrentFileConque<cr>
+map <leader>rl :RunRspecCurrentLineConque<cr>
+map <leader>rr :RunRubyCurrentFileConque<cr>
+map <leader>rf :RunLastConqueCommand<cr>
+map <leader>cc :CloseSingleConque<cr>
+
+map <leader><leader>y "+y
+
+imap <TAB> <C-N>
+imap <S-TAB> <C-P>
+map <M-k> dd
+
+:nnoremap _ f_x~
+set clipboard=unnamed

@@ -1,3 +1,2 @@
-export PATH=~/bin:$PATH
-export ZSH_THEME="l3wp"
-plugins=(parker $plugins)
+export PATH=~/bin:/usr/X11/bin:$PATH
+source $HOME/.rvm/scripts/rvm
