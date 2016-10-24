@@ -6,6 +6,7 @@ export CDPATH=$CDPATH:~/code
 # Fancy globbing http://linuxshellaccount.blogspot.com/2008/07/fancy-globbing-with-zsh-on-linux-and.html
 setopt extendedglob
 export COMMAND_MODE=unix2003
+export KEYTIMEOUT=70
 bindkey -sM vicmd 'ciw' 'bcw'
 bindkey -sM vicmd "ci'" "T'ct'"
 bindkey -sM vicmd 'ci"' 'T"ct"'
@@ -39,7 +40,7 @@ eval "$(fasd --init auto)"
 export DIRSTACKSIZE=10
 zstyle ':completion:*' hosts off
 setopt hist_ignore_space
-export EDITOR=vim
+export EDITOR=emacs
 go_libs="-lm"
 go_flags="-g -Wall -include allheaders.h -O3"
 alias go_c="c99 -xc '-' $go_libs $go_flags"
@@ -48,3 +49,25 @@ bindkey '^X^F' fasd-complete-f  # C-x C-f to do fasd-complete-f (only files)
 bindkey '^X^D' fasd-complete-d  # C-x C-d to do fasd-complete-d (only directories))
 
 prompt lewp
+
+export GTAGSCONF=/usr/local/share/gtags/gtags.conf
+export GTAGSLABEL=ctags
+
+export GOOGLE_API_CLIENT_ID=178162763323-bic5vd4p1b4pjjpd77t9bsfrfi4sci1e.apps.googleusercontent.com
+export GOOGLE_API_CLIENT_SECRET=D6Oxcl_oOsKrIMyhQx5oiivr
+
+export RLWRAP_HOME=~/.rlwrap
+
+export GOPATH=~/go
+
+source $HOME/.rvm/scripts/rvm
+export PAIRING_STATION=false
+source ~/code/advoy-rails/project_settings/zshrc
+[[ $EMACS = t ]] && unsetopt zle
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export TERM=xterm-256color
+source ~/.iterm2_shell_integration.`basename $SHELL`
+export EXENV_ROOT=/usr/local/var/exenv
+if which exenv > /dev/null; then eval "$(exenv init -)"; fi
+alias | gshuf | head -n 1 | cowsay -f dragon
